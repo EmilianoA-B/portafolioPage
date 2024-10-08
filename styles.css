@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.main div{
+    
+    border: 5px solid firebrick;
+}
+
+.infoArea{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+}
+
+.songArea{
+    flex: 1 1 35%;
+}
+
+.descArea{
+    flex: 1 1 65%;
+}
