@@ -1,30 +1,48 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .main{
+    margin:0;
+    background-color: #2B235A;
+    overflow:hidden;
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     height: 98vh;
 }
 
-.main div{
-    border: 5px solid firebrick;
+
+.hideSongArea{
+    height:50px
 }
 
 .socials{
+    color: #F8F8FF;
     display:flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
     list-style: none;
-   
 }
+
 .socials li {
     padding: 10px
 }
 
 .navbar {
-    
+    display:flex;
+    height: 5%;
+    margin-bottom: 10px;
+    padding:5px;
+    border-bottom: 2px solid#7E60BF;;
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1 auto;
 }
 
 .infoArea{
+    overflow: scroll;
     display: flex;
     flex: 1 1 auto;
     flex-direction: row;
@@ -32,9 +50,58 @@
 }
 
 .songArea{
-    flex: 1 1 35%;
+    display:flex;
+    flex-direction: column;
+    margin:8px;
+    padding:1%;
+    background-color: #433878;
+    border-radius: 4% / 2%;
+    border: solid#7E60BF;
+    overflow: scroll;
+    flex: 0 1 35%;
+}
+
+.playButton{
+    width: 60px;
+    height: 60px;
+    background-color: #7E60BF; /* Button background color */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* To position the triangle */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playButton::before{
+    content: '';
+    position: relative;
+    left: 0%; /* Position triangle inside the circle */
+    width: 0;
+    height: 0;
+    border-left: 20px solid #E4B1F0;  /* Triangle */
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
 }
 
 .descArea{
+    padding:1%;
+    color: #F8F8FF;
+    margin:8px;
+    border-radius: 2%;
+    
+    background-color: #2B235A;
     flex: 1 1 65%;
 }
+
+.playerBar{
+    display: flex;
+    flex: 1 1 auto;
+    margin:8px;
+    border: solid#7E60BF;
+    background-color: #433878;
+    border-radius: 1% / 15%;
+}
+
+
