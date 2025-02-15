@@ -1,7 +1,7 @@
 
 *{
     font-family: Consolas;
-    scrollbar-color: #FFE1FF;
+    scrollbar-color: #F8F8FF;
     scrollbar-width: thin;
 }
 
@@ -10,16 +10,37 @@ h1 {
     margin-bottom:10px;
 }
 
+/* Background */
+.mainBg {
+    background-color:#121212;
+}
+
+.primBg {
+    background-color:#1E1E1E;
+}
+
+.secBg {
+    background-color:#252525;
+
+}
+
+.oppositeBh{
+    background-color: #F8F8FF;
+}
+
+.hoverSecBg:hover {
+    background-color:#252525;
+}
+
 .main{
     margin:0;
-    background-color: #2B235A;
     overflow:hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-
+/*Navbar Area*/
 .hideSongArea{
     height:50px
 }
@@ -34,7 +55,11 @@ h1 {
 }
 
 .socials li {
-    padding: 10px
+    padding: 12px
+}
+
+.socials i {
+    font-size: 30px;
 }
 
 .navbar {
@@ -43,12 +68,13 @@ h1 {
     height: 50px;
     margin-bottom: 10px;
     padding:5px;
-    border-bottom: 2px solid#7E60BF;;
+    border-bottom: 2px solid#F8F8FF;
     flex-direction: row;
     align-items: center;
     flex: 0 1 50px;
 }
 
+/*Info Area*/
 .infoArea{
     overflow: hidden;
     display: flex;
@@ -57,26 +83,12 @@ h1 {
     max-height: 87vh; 
 }
 
-.infoArea > div:hover {
-    outline: 2px solid#7E60BF;
-}
-
 .infoArea > div {
     color: #F8F8FF;
 }
 
-.songArea{
-    overflow-y: auto;
-    display:flex;
-    flex-direction: column;
-    margin:8px;
-    margin-left: 10px;
-    padding:1%;
-    background-color: #433878;
-    border-radius: 4% / 2%;
-    flex: 1 1 35%;
-}
 
+/*Description Area*/
 .descBox{
     display:flex;
     flex-direction: column;
@@ -86,66 +98,99 @@ h1 {
     margin:8px;
     margin-right: 10px;
     border-radius: 2%;
-    background-color: #433878 ;
     flex: 1 1 75%;
 }
 
 .descText {
     font-size:24px;
     justify-content: center;
-    scrollbar-color: #E4B1F0 #433878;
     overflow-y: auto;
     overflow-x: hidden;
     padding-top: 0;
     margin-right: 10px;
     border-radius: 2%;
-    background-color: #433878 ;
     max-height: 100%;
     padding-right: 10px;
     padding-bottom: 20px;
     flex: 1 1 auto;
 }
 
+/*Song Area*/
+.songArea{
+    overflow-y: auto;
+    display:flex;
+    flex-direction: column;
+    margin:8px;
+    margin-left: 10px;
+    padding:1%;
+    border-radius: 4% / 2%;
+    flex: 1 1 35%;
+}
+
+.songPlayButton{
+    padding: 0 10px 0 10px;
+    font-size: 1.5em;
+}
+
+.songPlayButton *{
+    font-size: 0.73em;
+}
+
+.song{
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+    gap:10px;
+    flex-direction: row;
+    padding: 8px;
+    border-radius: 3% / 15%;
+}
+
+.songDesc {
+    padding-left: 5px;
+}
+
+
+.albumCover{
+    display: flex;
+    padding: 1.5%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+}
+
+.albumCover > img{
+    flex: 1 1 auto;
+    max-height: 50px;
+    max-width: 50px;
+    margin: auto;
+}
+
+/*Playerbar Area*/
 .playerBar{
     display: flex;
+    flex-direction: row;
     flex: 0 0 90px;
     margin:8px;
     margin-left: 10px;
     margin-bottom: 10px;
-    background-color: #433878;
     border-radius: 1% / 15%;
 }
 
-.playerBar:hover{
-    outline: 2px solid#7E60BF;
+
+.actualPlayer{
+    flex: 1 1 auto;
 }
 
-.playButton{
-    width: 60px;
-    height: 60px;
-    background-color: #7E60BF; /* Button background color */
-    border-radius: 50%; /* Make it circular */
+.volumeControl{
+    flex: 1 1 auto;
+}
+
+.songPlayer{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* To position the triangle */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.playButton::before{
-    content: '';
-    position: relative;
-    left: 5%; /* Position triangle inside the circle */
-    width: 0;
-    height: 0;
-    border-left: 20px solid #E4B1F0;  /* Triangle */
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-}
-
-.song{
+    flex: 1 1 auto;
+    gap:10px;
+    flex-direction: row;
     padding: 8px;
-    outline: 2px solid#7E60BF;
-    border-radius: 3% / 20%;
+    border-radius: 5% / 20%;
 }
