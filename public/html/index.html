@@ -4,8 +4,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>EmilianoAB | Project Portafolio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-		<link rel="stylesheet" href="./styles.css">
+		<link rel="stylesheet" href="../css/styles.css">
 	</head>
 
 	<body class="main mainBg">	
@@ -26,7 +29,7 @@
 				<div class="songsDiv">
 					<div class="song hoverSecBg">
 						<div class="songPlayButton" data-num="1">1</div>
-						<div class="albumCover oppositeBh"><img src="../imgs/pngwing.com.png"></div>
+						<div class="albumCover oppositeBh"><i class="fa-solid fa-cubes-stacked"></i></div>
 						<div class="songDesc">
 							<strong class="songTitle">Song Title</strong>
 							<br class="songDesc">Album 
@@ -58,23 +61,34 @@
 
 		</div>
 		
-		<div class="playerBar primBg">
+		<div class="playerArea primBg">
+
 			<div class="songPlayer primBg">
-				<div class="albumCover"><img src="./imgs/pngwing.com.png"></div>
+				<div class="albumCover oppositeBh"><i class="fa-solid fa-cubes-stacked"></i></div>
 				<div class="songDesc">
 					<strong>Song Title</strong>
 					<br>Album	 
 				</div> 
 			</div>
+
 			<div class="actualPlayer">
-				<h2>ActualPlayer<h2>
+				<div class="playerButtons">
+					<i class="fa-solid fa-shuffle"></i>
+					<i class="fa-solid fa-backward-step"></i>
+					<i class="fa-solid fa-circle-play"></i>
+					<i class="fa-solid fa-forward-step"></i>
+					<i class="fa-solid fa-repeat"></i>
+				</div>
+				<div class="playerBar">
+					<div class="playedBar"></div>
+					<div class="playerBall"></div>
+					<div class="notPlayedBar"></div>
+				</div>
 			</div>
-			<div class="volumeControl">
-				<h2>Volume</h2>
-			</div>
+
 		</div>
 
 	</body>
 
-	<script src="./index.js" defer></script>
+	<script src="../js/mainScript.js" defer></script>
 <html>
