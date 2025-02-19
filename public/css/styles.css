@@ -111,14 +111,15 @@ h1 {
 
 /*Song Area*/
 .songArea{
-	overflow-y: auto;
 	display:flex;
+	border-radius: 20px;
 	flex-direction: column;
+	flex: 1 1 35%;
 	margin:8px;
 	margin-left: 10px;
 	padding:1%;
-	border-radius: 20px;
-	flex: 1 1 35%;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .songPlayButton{
@@ -132,16 +133,31 @@ h1 {
 
 .song{
 	align-items: center;
+	border-radius: 15px;
 	display: flex;
 	flex: 0 1 auto;
-	gap:10px;
 	flex-direction: row;
+	gap:10px;
 	padding: 8px;
-	border-radius: 15px;
 }
 
-.songDesc {
+.songDesc{
 	padding-left: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+.songScroll{
+	display: inline-block;
+    white-space: nowrap;
+    position: relative;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Adjust based on text length */
 }
 
 .albumCover{
@@ -151,6 +167,8 @@ h1 {
 	justify-content: center;
 	text-align: center;
 	border-radius: 15px;
+	height: 50px;
+	width: 50px;
 }
 
 .albumCover > img{
@@ -162,7 +180,7 @@ h1 {
 
 .albumCover > i{
 	display: block;
-	font-size: 40px;
+	font-size: 30px;
 	color:#121212;
 	line-height: 50px;
 	height: 50px;
@@ -183,11 +201,13 @@ h1 {
 
 .actualPlayer{
 	align-items: center;
+	background-color: #1E1E1E;
 	display: flex;
 	flex-direction: column;
-	flex: 2.6 1 auto;
+	flex: 2.6 0 auto;
 	justify-content: center;
 	margin: auto;
+	max-width: 70%;
 	text-align: center; 
 }
 
@@ -241,9 +261,11 @@ h1 {
 	align-items: center;
 	border-radius: 15px;
 	display: flex;
-	flex: 1 1 auto;
+	flex: 0 1 auto;
 	flex-direction: row;
 	margin-left: 8px;
+	max-width: 30%;
+	min-width: 30%;
 	gap:10px;
 	padding: 8px;
 }

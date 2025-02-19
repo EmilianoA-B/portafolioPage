@@ -1,29 +1,30 @@
 {
-
 	"introduction": {
 		"title":"Who am I?",
-		"description":"Hey! I'm Emiliano Ariza Bolaños, welcome to my portafolio page! I'm an 8th semester Computer Engineering student at the National Polytechnic Institute (IPN) with hands-on experience in software development, team collaboration, and problem-solving. My technical expertise includes Python, C++, Node.js, and MySQL. With a proven ability to deliver creative and quality solutions, I aim to secure an internship or entry-level role in software development.",
-		"iconOrUrl": ""
+		"description":"<p>Hey! I'm Emiliano Ariza Bolaños, welcome to my portafolio page! I'm an 8th semester Computer Engineering student at the National Polytechnic Institute (IPN) with hands-on experience in software development, team collaboration, and problem-solving.</p> <p>My technical expertise includes: <br> Python, C++, Node.js, and MySQL.</p> I'm a person that is able to deliver creative and quality solutions; with this in mind I aim to secure an internship or entry-level role in software development.",
+		"iconOrUrl": "<i class=\"fa-solid fa-person-through-window\"></i>"
 	},
 	"projects": [
 		{
+			"id":1,
 			"title": "Teacher Grading App",
 			"technologies": ["Node.js", "MySQL", "HTML", "CSS", "JavaScript"],
 			"description": "A web application designed to allow students to review and grade professors securely within their institution. Led a team of 12 members in the development process, ensuring adherence to SCRUM practices and meeting project deadlines.",
-			"iconOrUrl": ""
+			"iconOrUrl": "<i class=\"fa-solid fa-chalkboard-user\"></i>"
 		},
 		{
+			"id":2,
 			"title": "Small compiler",
 			"technologies": ["Python", "emu8086"],
 			"description": "A small compiler built using Python that translates simple arithmetic operations and variable declarations into assembly language. Developed as a team project (2 members total) and supports operations with decimal and integer numbers.",
-			"iconOrUrl": ""
+			"iconOrUrl": "<i class=\"fa-solid fa-window-restore\"></i>"
 		},
 		{
+			"id":3,
 			"title": "Pattern recognition using PIP",
 			"technologies": ["Python"],
 			"description": "A desktop application designed to analyze and recognize patterns in a CSV dataset using the Perceptually Important Points (PIP) algorithm. The program identifies key peaks and valleys in the dataset and compares height values to detect predefined patterns.",
-			"iconOrUrl": "stock.png"
+			"iconOrUrl": "<i class=\"fa-solid fa-arrow-trend-up\"></i>"
 		}
 	]
-	
 }
