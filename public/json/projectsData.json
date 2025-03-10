@@ -6,21 +6,18 @@
 	},
 	"projects": [
 		{
-			"id":1,
 			"title": "Teacher Grading App",
 			"technologies": ["Node.js", "MySQL", "HTML", "CSS", "JavaScript"],
 			"description": "A web application designed to allow students to review and grade professors securely within their institution. Led a team of 12 members in the development process, ensuring adherence to SCRUM practices and meeting project deadlines.",
 			"iconOrUrl": "<i class=\"fa-solid fa-chalkboard-user\"></i>"
 		},
 		{
-			"id":2,
 			"title": "Small compiler",
 			"technologies": ["Python", "emu8086"],
 			"description": "A small compiler built using Python that translates simple arithmetic operations and variable declarations into assembly language. Developed as a team project (2 members total) and supports operations with decimal and integer numbers.",
 			"iconOrUrl": "<i class=\"fa-solid fa-window-restore\"></i>"
 		},
 		{
-			"id":3,
 			"title": "Pattern recognition using PIP",
 			"technologies": ["Python"],
 			"description": "A desktop application designed to analyze and recognize patterns in a CSV dataset using the Perceptually Important Points (PIP) algorithm. The program identifies key peaks and valleys in the dataset and compares height values to detect predefined patterns.",

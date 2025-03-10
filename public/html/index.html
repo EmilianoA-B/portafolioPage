@@ -2,19 +2,21 @@
 <html lang="en">
 
 	<head>
-		<meta charset="UTF-8">
 		<title>EmilianoAB | Project Portafolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="stylesheet" href="../css/desktopStyles.css">
+		<link rel="stylesheet" href="../css/mobileStyles.css">
 	</head>
 
 	<body class="main mainBg">	
 
 		<div class ="navbar">
-			<!-- <button class="hideSongArea">asdfasdf</button> -->
+			<i class="hideSongArea fa-solid fa-bars"></i>
 			<ul class="socials">
 				<li class="hoverSecBg" data-link="https://github.com/EmilianoA-B"><i class="fa-brands fa-github "></i></li>
 				<li class="hoverSecBg" data-link="https://www.linkedin.com/in/ariza-bola%C3%B1os-emiliano/"><i class="fa-brands fa-linkedin fa-2x"></i></li>
@@ -23,9 +25,10 @@
 		</div>
 
 		<div class="infoArea">
-
 			<div class="songArea primBg">
-				<h1>Choose a song!</h1>
+				<div class="songAreaTitle">
+					<strong>Choose a song!</strong>
+				</div>
 				<div class="songsDiv">
 					<!--Example song-->
 					<!--
@@ -80,5 +83,6 @@
 
 	</body>
 
-	<script src="../js/mainScript.js" defer></script>
+	<script type="module" src="../js/mainScript.js" defer></script>
+	<script type="module" src="../js/mobileScript.js" defer></script>
 <html>

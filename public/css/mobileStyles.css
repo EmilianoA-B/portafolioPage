@@ -1,0 +1,62 @@
+@media screen and (max-width: 1023px) {
+
+	html {
+		max-height: 100svh;
+		overflow-y: hidden;
+	}
+	
+	.main{
+		min-height: 100svh;
+		max-height: 100svh;
+		min-width: 99svw;
+		overflow: hidden;
+	}
+
+	/* Navbar */
+	.socials{
+		margin-right: 70px;
+	}
+
+	.hideSongArea{
+		font-size: 27px;
+		padding: 10px;
+		height: 50px;
+		margin: auto;
+		display: flex;
+	}
+
+	/* Project Description */
+	.descTitle{
+		font-size: 24px;
+	}
+
+	.descText{
+		font-size: 18px;
+	}
+	
+	/* Song List */
+	.songArea{
+		font-size: 16px;
+	}
+
+	.songAreaTitle{
+		font-size: 25px;
+	}
+
+	.songsDiv{
+		padding: 10px;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	/* Player */
+
+	.actualPlayer{
+		display: none;
+	}
+
+	.songPlayer{
+		flex: 1;
+		max-width: 70%;
+	}
+}

@@ -1,3 +1,6 @@
+//Import mobile functions
+import * as Mobile from './mobileScript.js'
+
 //Global variable that'll hold JSON
 let JsonData = null;
 
@@ -8,6 +11,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     initSocialLinks();
     initAllSongs();
     initFirstDesc();
+	displaySongListOnResize
+	Mobile.initShowSongList();
 });
  
 async function fetchProjectData() {
@@ -31,14 +36,14 @@ async function fetchProjectData() {
 				</div> 
 			`;
 			songsArea.appendChild(introductionDiv);
-
+			let index = 1;
 			//For each project, create a song
 			JsonData.projects.forEach((project) => {
 				const newSong = document.createElement("div");
 				newSong.classList.add("song");
 				newSong.classList.add("hoverSecBg");
 				newSong.innerHTML = `
-					<div class="songPlayButton" data-num="${project.id}">${project.id}</div>
+					<div class="songPlayButton" data-num="${index}">${index}</div>
 					<div class="albumCover oppositeBh">${project.iconOrUrl}</div>
 					<div class="songDesc">
 						<div class="songScroll">
@@ -47,6 +52,7 @@ async function fetchProjectData() {
 						</div>
 					</div> 
 				`;
+				index += 1;
 				songsArea.appendChild(newSong);
 			})
 		})
@@ -79,21 +85,22 @@ function initSocialLinks() {
 /* Initialized any song event */
 function initAllSongs() {
     const allSongs = document.querySelectorAll(".song");
-	console.log(allSongs)
 
     allSongs.forEach((song) => {
         const placeForNumberOrPlaybutton = song.querySelector(".songPlayButton");
-        const songNumber = placeForNumberOrPlaybutton.getAttribute("data-num");
+        const songTitle = song.querySelector(".songTitle").textContent;
+		const songNumber = placeForNumberOrPlaybutton.getAttribute('data-num');
+
 
 		song.addEventListener("click", () => {
-			if(songNumber == "?"){
+			if(songTitle == "Who am I?"){
 				document.querySelector(".descText").innerHTML = JsonData.introduction.description;
 				document.querySelector(".descTitle").innerHTML = JsonData.introduction.title;
 				document.querySelector(".songPlayer").querySelector(".albumCover").innerHTML = JsonData.introduction.iconOrUrl;
 				document.querySelector(".songPlayer").querySelector(".songDesc").querySelector(".songTitle").innerHTML = JsonData.introduction.title;
 				document.querySelector(".songPlayer").querySelector(".songDesc").querySelector(".songAlbum").innerHTML = ';)';
 			} else {
-				const projectObj = JsonData.projects.find(project => Number(project.id) === Number(songNumber))
+				const projectObj = JsonData.projects.find(project => project.title === songTitle)
 				document.querySelector(".descText").innerHTML = projectObj.description;
 				document.querySelector(".descTitle").innerHTML = projectObj.title;
 				document.querySelector(".songPlayer").querySelector(".albumCover").innerHTML = projectObj.iconOrUrl;
@@ -117,6 +124,19 @@ function initAllSongs() {
             placeForNumberOrPlaybutton.innerHTML = songNumber;
         });
     });
+}
+
+function displaySongListOnResize() {
+	const songList = document.querySelector('.songArea');
+
+	window.visualViewport.addEventListener('resize', () => {
+		console.log("Hello!")
+		if(window.matchMedia("(min-width: 1023px)").matches){
+			songList.classList.remove('hidden');
+		} else {
+			songList.classList.add('hidden');
+		}
+	})
 }
 
 function setPlayerBarAnimation(){
