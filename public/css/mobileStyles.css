@@ -55,8 +55,16 @@
 		display: none;
 	}
 
+
+	.mobilePlayButton{
+		align-items: center;
+		display: flex;
+		flex: 1 1 auto;
+		font-size: 20px;
+	}
+
 	.songPlayer{
-		flex: 1;
-		max-width: 70%;
+		flex: 4.5 1 auto;
+		max-width: 100%;
 	}
 }

@@ -93,6 +93,7 @@ h1 {
 	margin-right: 10px;
 	border-radius: 20px;
 	flex: 1 1 75%;
+	text-align: justify;
 }
 
 .descText{
@@ -205,7 +206,6 @@ h1 {
 	border-radius: 20px;
 }
 
-
 .actualPlayer{
 	align-items: center;
 	background-color: #1E1E1E;
@@ -277,9 +277,13 @@ h1 {
 	padding: 8px;
 }
 
+.mobilePlayButton{
+	display: none;
+}
+
 /* Utility */
 
-.hidden {
+.hidden{
 	display: none;
 }
 

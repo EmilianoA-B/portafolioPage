@@ -20,4 +20,7 @@ function initShowSongList() {
 
 }
 
+function swipeLeftOnDesc() {
+}
+
 export { initShowSongList } ;

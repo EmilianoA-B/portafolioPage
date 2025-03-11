@@ -20,7 +20,7 @@
 		{
 			"title": "Pattern recognition using PIP",
 			"technologies": ["Python"],
-			"description": "A desktop application designed to analyze and recognize patterns in a CSV dataset using the Perceptually Important Points (PIP) algorithm. The program identifies key peaks and valleys in the dataset and compares height values to detect predefined patterns.",
+			"description": "A desktop application designed to analyze and recognize patterns in a CSV dataset using the Perceptually Important Points (PIP) algorithm. <p>The program identifies key peaks and valleys in the dataset and compares height values to detect predefined patterns.</p>",
 			"iconOrUrl": "<i class=\"fa-solid fa-arrow-trend-up\"></i>"
 		}
 	]
