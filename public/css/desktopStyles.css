@@ -198,10 +198,10 @@ h1 {
 /*Playerbar Area*/
 .playerArea{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
 	flex: 0 0 90px;
 	margin:8px;
-	margin-left: 10px;
 	margin-bottom: 10px;
 	border-radius: 20px;
 }
@@ -244,13 +244,13 @@ h1 {
 	border: none;
 	border-top: 2px dashed #B3B3B3;
 	height: 0;
-	width: 70%;
+	width: 0%;
 }
 
 .playedBar{
-	width: 30%;
 	height: 2px;
 	background-color: #B3B3B3;
+	width: 0%;
 }
 
 .playerBall{
@@ -278,6 +278,17 @@ h1 {
 }
 
 .mobilePlayButton{
+	display: none;
+}
+
+.normalPlayer{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.mobilePlayerBar{
 	display: none;
 }
 

@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", async function() {
     initSocialLinks();
     initAllSongs();
     initFirstDesc();
-	displaySongListOnResize
+	displaySongListOnResize();
+	setPlayerBarAnimation();
+
+	//Mobile init
 	Mobile.initShowSongList();
 });
  
@@ -130,7 +133,6 @@ function displaySongListOnResize() {
 	const songList = document.querySelector('.songArea');
 
 	window.visualViewport.addEventListener('resize', () => {
-		console.log("Hello!")
 		if(window.matchMedia("(min-width: 1023px)").matches){
 			songList.classList.remove('hidden');
 		} else {
@@ -139,6 +141,46 @@ function displaySongListOnResize() {
 	})
 }
 
-function setPlayerBarAnimation(){
-    
+function setPlayerBarAnimation() {
+    const textContainer = document.querySelector(".descText");
+
+    function updateProgress() {
+		const playedBar = getPlayedBar();
+    	const notPlayedBar = getNotPlayedBar();
+        const scrolled = textContainer.scrollTop;
+        const visibleHeight = textContainer.clientHeight; 
+        const totalHeight = textContainer.scrollHeight - visibleHeight;	 
+
+		if (textContainer.scrollHeight <= visibleHeight) {
+			console.log("condition doing da thing");
+            playedBar.style.width = "100%";
+            return;
+        }
+
+        let progress = (scrolled / totalHeight) * 100;
+        progress = Math.max(0, Math.min(progress, 100));
+
+		notPlayedBar.style.width = `${100-progress}%`;
+        playedBar.style.width = `${progress}%`;
+        console.log(progress);
+    }
+
+    textContainer.addEventListener("scroll", updateProgress);
+    updateProgress();
+}
+
+function getPlayedBar(){
+	if (window.innerWidth <= 1023) {
+        return document.querySelector(".mobilePlayedBar");
+    } else {
+        return document.querySelector(".playedBar");
+    }
+}
+
+function getNotPlayedBar(){
+	if (window.innerWidth <= 1023) {
+        return document.querySelector(".mobileNotPlayedBar");
+    } else {
+        return document.querySelector(".notPlayedBar");
+    }
 }
