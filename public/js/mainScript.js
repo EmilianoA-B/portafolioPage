@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 	Mobile.initShowSongList();
 });
  
+/* Gets project data and displays it */ 
 async function fetchProjectData() {
 	await fetch("../json/projectsData.json")
 		.then(async (response) => {
@@ -64,6 +65,7 @@ async function fetchProjectData() {
 		});
 }
 
+/* Initializes the first song on load */ 
 function initFirstDesc() {
 	const firstSong = document.querySelector('div[data-num="?"]').parentElement;
 	firstSong.click();
@@ -129,6 +131,7 @@ function initAllSongs() {
     });
 }
 
+/* Displays or hides away songs based on resize */
 function displaySongListOnResize() {
 	const songList = document.querySelector('.songArea');
 
@@ -141,6 +144,7 @@ function displaySongListOnResize() {
 	})
 }
 
+/* Initialzies the player bar animation */
 function setPlayerBarAnimation() {
     const textContainer = document.querySelector(".descText");
 
@@ -169,6 +173,7 @@ function setPlayerBarAnimation() {
     updateProgress();
 }
 
+/* Gets player bar depending on mobile or desktop */
 function getPlayedBar(){
 	if (window.innerWidth <= 1023) {
         return document.querySelector(".mobilePlayedBar");
@@ -177,6 +182,7 @@ function getPlayedBar(){
     }
 }
 
+/* Gets not player bar depending on mobile or desktop */
 function getNotPlayedBar(){
 	if (window.innerWidth <= 1023) {
         return document.querySelector(".mobileNotPlayedBar");

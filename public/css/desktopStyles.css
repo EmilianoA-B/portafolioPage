@@ -96,9 +96,13 @@ h1 {
 	text-align: justify;
 }
 
+.descTitle{
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
 .descText{
 	font-size:24px;
-	justify-content: center;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding-top: 0;
@@ -107,6 +111,14 @@ h1 {
 	padding-right: 10px;
 	padding-bottom: 20px;
 	flex: 1 1 auto;
+}
+
+.descText img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /*Song Area*/
@@ -118,11 +130,12 @@ h1 {
 	margin:8px;
 	margin-left: 10px;
 	padding:20px;
-	overflow-y: auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 
 .songsDiv{
+	overflow-y: auto;
 	flex: 1 1 auto;
 }
 
