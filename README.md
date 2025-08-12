@@ -7,4 +7,5 @@ I used HTML, CSS & JavaScript to make the site, nothing else. To deploy the site
 ## How does it look?
 The site looks like this on a webpage, it also has a mobile view.
 
+
 ![image](https://github.com/user-attachments/assets/a5f2cc7b-caf2-4f5d-aec8-f842917803bc)
