@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async function() {
  
 /* Gets project data and displays it */ 
 async function fetchProjectData() {
-	await fetch("../json/projectsData.json")
+	await fetch("./json/projectsData.json")
 		.then(async (response) => {
 			JsonData = await response.json();
 			const songsArea = document.querySelector(".songsDiv");
